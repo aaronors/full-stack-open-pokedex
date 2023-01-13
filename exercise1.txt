@@ -1,0 +1,44 @@
+x --- Some common steps in a CI setup include linting, testing, and building. What are the specific tools for taking care of these steps in the ecosystem of the language you picked? You can search for the answers by google.
+
+Language chosen: Java
+
+linting tool: Uncrustify
+
+testing tool: Junit
+
+building tool: Ant/Maven/Gradle
+
+x --- What alternatives are there to set up the CI besides Jenkins and GitHub Actions? Again, you can ask google!
+
+Based on my research Jenkins and GiHub Actions seem to be the most popular CI solutions out there. 
+
+other tools: Azure DevOps, Gitlab CI/CD, Circle CI, TeamCity
+
+x --- Would this setup be better in a self-hosted or a cloud-based environment? Why? What information would you need to make that decision?
+
+For a smaller project I think a cloud-based environment would work. For a larger and more complex project, self-hosted would be a better option. Cloud-based environment CI/CD solutions would work better for smaller projects because they are easier to set up. Self-hosted would be better for larger projects because I think that larger and more complex projects would necessitate fine-grained control when it comes to CI/CD.
+
+Pros for using Github Actions:
+- quicker to set up, (possibly) easier to use
+
+Cons for using Github Actions:
+- newer product, may be difficult to troubleshoot errors due to documentation/discussion online
+- may be limited/difficult to use if project expands down the road, or if the team needs fine-grained control
+
+Pros for using Jenkins:
+- open source
+- has been around for awhile = battletested
+- extensive documentation and discussion on stackoverflow
+
+Cons for using Jenkins:
+- may be too complex depending on project size
+- need to provide a self-hosted environment
+- plugin management, security concerns
+
+Other information needed:
+- what is the team most familiar with?
+- what languages/frameworks/tools are the team members using?
+- what source control solution is the team using? 
+- what is the team's budget for CI/CD services or hardware if going the self-hosted route?
+- what is the timeline for the project? Are there any additional features that will be added after the MVP has been delivered? 
+- what is the project?
