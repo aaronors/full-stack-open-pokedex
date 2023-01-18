@@ -44,19 +44,19 @@ jobs:
       - run: flyctl deploy --remote-only
   tag_release_patch:
     name: update patch number
+    uses: anothrNick/github-tag-action@1.61.0
     needs: [simple_deployment_pipeline]    
     if: ${{ github.event_name != 'push' }}
     runs-on: ubuntu-20.04
-    uses: anothrNick/github-tag-action@1.61.0
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       DEFAULT_BUMP: patch
   tag_release_minor:
     name: update minor number
+    uses: anothrNick/github-tag-action@1.61.0
     needs: [simple_deployment_pipeline]    
     if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-20.04
-    uses: anothrNick/github-tag-action@1.61.0
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       DEFAULT_BUMP: minor
