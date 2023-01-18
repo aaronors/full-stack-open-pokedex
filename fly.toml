@@ -26,7 +26,6 @@ kill_timeout = 5
     restart_limit = 0
     timeout = 2000
     tls_skip_verify = false
-    [services.http_checks.headers]
   internal_port = 5000
   processes = ["app"]
   protocol = "tcp"
